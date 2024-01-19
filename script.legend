@@ -1,0 +1,44 @@
+
+##ALL OF THE NUMBERS ARE FLOATS WITH EXACTLY 6 DECIMALS
+(double will not working, you have to use float)
+
+
+##############################################
+A||821.626683|322.793283|939.229582|1026.084733||4.810916||2.208852
+
+('|' is in reality a space ' ', this is more visual)
+A : plane
+2 SPACES
+1st number : x coordinate of the plane (value expected between 1 and 1919)
+1 SPACE
+2nd number : y coordinate of the plane (value expected between 1 and 1079)
+2 SPACES
+3rd number : x coordinate of the final point (value expected between 1 and 1919)
+1 SPACE
+4th number : y coordinate of the final point (value expected between 1 and 1079)
+2 SPACES
+5th number : speed of the plane (value expected > 1)
+2 SPACES
+6th number : delay of the plane (value expected >= 0)
+
+##############################################
+T||1698.314592|757.354330||5.968187
+
+('|' is in reality a space ' ', this is more visual)
+T : tower
+2 SPACES
+1st number : x coordinate of the tower (value expected between 1 and 1919)
+1 SPACE
+2nd number : y coordinate of the tower  (value expected between 1 and 1079)
+2 SPACES
+3rd number : range (radius) of the tower in % of the larger window's side  (value expected > 1 and < 100)
+
+##############################################
+
+##IF YOU WANT TO GENERATE A SCRIPT IN THIS FORMAT, YOU CAN USE THE FOLLOWING FUNCTION
+
+"python gen.py -p [number of planes] -t [number of towers] -d [delay max in seconds] -pa [output file name]"
+It will create a file with the name you gave it if it doesn't exist, and write the script in it.
+If the file already exists, it will overwrite it.
+If it doesn't create it, make sure you have +x permission on gen.py file and try to create the file previously
+before using it.
